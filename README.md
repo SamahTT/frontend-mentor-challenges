@@ -15,3 +15,7 @@ This repository includes solutions to challenges from [Frontend Mentor](https://
 ### 3. Blog Preview Card ✍🏻
 
 [View Result](https://samahtt.github.io/frontend-mentor-challenges/blog-preview-card-main/).
+
+### 4. Product Preview Card 🧴 
+
+[View Result](https://samahtt.github.io/frontend-mentor-challenges/product-preview-card-component-main/). 
