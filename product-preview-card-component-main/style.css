@@ -84,7 +84,7 @@ body {
 }
 
 .btn{
-    width: 80%;
+    width: 85%;
     height: 10%;
     background: var(--Dark-cyan);
     border-radius: 9px;
@@ -111,4 +111,37 @@ body {
 .btn:hover{
     background:var(--Very-dark-blue);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 260px;
+        height: 490px;
+    }
+
+    .details{
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+        width: 100%;
+        height: 65%;
+    }
+
+    .img-div{
+        background-image: url('images/image-product-mobile.jpg');
+        height: 35%;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .product-name{
+        font-size: 25px;
+    }
+
+    .product-name, .btn{
+        margin-top: -2%;
+    }
 }
