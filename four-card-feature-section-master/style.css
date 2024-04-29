@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --font: "Poppins";
+    --weight-200: 200;
+    --weight-400: 400;
+    --weight-600: 600;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background: var(--Very-Light-Gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upper-div{
+    max-width: max-content;
+    min-width: 200px;
+    text-align: center;
+    background: red;
+}
+
+.lower-div{
+    min-width: 200px;
+    max-width: 600px;
+    background: var(--Very-Light-Gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 100%;
+    height: 220px;
+    background: var(--Very-Light-Gray);
+    border-top: 2px solid var(--Cyan);
+    border-radius: 10px;
+    box-shadow: 0px, 0px, 0.3rem, 0.3rem, var(--Grayish-Blue);
+}
