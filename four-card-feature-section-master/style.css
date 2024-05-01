@@ -28,13 +28,13 @@ body {
     align-items: center;
 }
 
-.upper-div{
+.upper-div {
     max-width: 600px;
     min-width: 200px;
     text-align: center;
 }
 
-.lower-div{
+.lower-div {
     min-width: 200px;
     max-width: 600px;
     background: var(--Very-Light-Gray);
@@ -43,29 +43,29 @@ body {
     align-items: center;
 }
 
-.heading-1{
+.heading-1 {
     font-family: var(--font);
     font-weight: var(--weight-200);
     font-size: 25px;
     color: var(--Very-Dark-Blue);
 }
 
-.heading-2{
+.heading-2 {
     font-family: var(--font);
     font-weight: var(--weight-600);
     font-size: 25px;
-    color: var(--Very-Dark-Blue);  
-    margin-top: -3%;  
+    color: var(--Very-Dark-Blue);
+    margin-top: -3%;
 }
 
-.desc{
+.desc {
     font-family: var(--font);
     font-weight: var(--weight-400);
     font-size: 15px;
     color: var(--Grayish-Blue);
 }
 
-.card{
+.card {
     width: 300px;
     height: 220px;
     border-top: 3px solid var(--Cyan);
@@ -74,19 +74,19 @@ body {
     margin-bottom: 20px;
 }
 
-.orange-border{
+.orange-card {
     border-top-color: var(--Orange);
 }
 
-.cyan-border{
+.cyan-card {
     border-top-color: var(--Cyan);
 }
 
-.red-border{
+.red-card {
     border-top-color: var(--Red);
 }
 
-.icon{
+.icon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -97,30 +97,30 @@ body {
     margin-top: 2em;
 }
 
-.icon-calc{
+.icon-calc {
     background-image: url('images/icon-calculator.svg');
 }
 
-.icon-karma{
+.icon-karma {
     background-image: url('images/icon-karma.svg');
 }
 
-.icon-sup{
+.icon-sup {
     background-image: url('images/icon-supervisor.svg');
 }
 
-.icon-team{
+.icon-team {
     background-image: url('images/icon-team-builder.svg');
 }
 
-.card-title{
+.card-title {
     font-family: var(--font);
     color: var(--Very-Dark-Blue);
     font-size: 20px;
     font-weight: var(--weight-600);
 }
 
-.card-par{
+.card-par {
     font-family: var(--font);
     color: var(--Grayish-Blue);
     font-size: 13px;
@@ -128,7 +128,25 @@ body {
     width: 80%;
 }
 
-.card-title, .card-par{
+.card-title,
+.card-par {
     margin-left: 5%;
 }
 
+
+@media only screen and (min-width: 600px) {
+    .lower-div {
+        min-width: 600px;
+        max-width: max-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .orange-card,
+    .cyan-card {
+        grid-row: span 2;
+    }
+}
