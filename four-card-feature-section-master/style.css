@@ -32,7 +32,6 @@ body {
     max-width: 600px;
     min-width: 200px;
     text-align: center;
-    background: red;
 }
 
 .lower-div{
@@ -44,13 +43,47 @@ body {
     align-items: center;
 }
 
+.heading-1{
+    font-family: var(--font);
+    font-weight: var(--weight-200);
+    font-size: 25px;
+    color: var(--Very-Dark-Blue);
+}
+
+.heading-2{
+    font-family: var(--font);
+    font-weight: var(--weight-600);
+    font-size: 25px;
+    color: var(--Very-Dark-Blue);  
+    margin-top: -3%;  
+}
+
+.desc{
+    font-family: var(--font);
+    font-weight: var(--weight-200);
+    font-size: 20px;
+    color: var(--Grayish-Blue);
+}
+
 .card{
     width: 300px;
     height: 220px;
     border-top: 3px solid var(--Cyan);
     border-radius: 10px;
-    box-shadow: 0px 0px 0.6rem 1px var(--Grayish-Blue);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin-bottom: 20px;
+}
+
+.orange-border{
+    border-top-color: var(--Orange);
+}
+
+.cyan-border{
+    border-top-color: var(--Cyan);
+}
+
+.red-border{
+    border-top-color: var(--Red);
 }
 
 .icon{
@@ -89,7 +122,13 @@ body {
 
 .card-par{
     font-family: var(--font);
-    color: var(--Very-Dark-Blue);
-    font-size: 14px;
+    color: var(--Grayish-Blue);
+    font-size: 13px;
     font-weight: var(--weight-400);
+    width: 80%;
 }
+
+.card-title, .card-par{
+    margin-left: 5%;
+}
+
