@@ -60,8 +60,8 @@ body {
 
 .desc{
     font-family: var(--font);
-    font-weight: var(--weight-200);
-    font-size: 20px;
+    font-weight: var(--weight-400);
+    font-size: 15px;
     color: var(--Grayish-Blue);
 }
 
