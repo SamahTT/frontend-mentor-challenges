@@ -20,6 +20,6 @@ This repository includes solutions to challenges from [Frontend Mentor](https://
 
 [View Result](https://samahtt.github.io/frontend-mentor-challenges/product-preview-card-component-main/). 
 
-### 5. Cards Feature Section
+### 5. Four Card Feature Section 💡
 
 [View Result](https://samahtt.github.io/frontend-mentor-challenges/four-card-feature-section-master/).
