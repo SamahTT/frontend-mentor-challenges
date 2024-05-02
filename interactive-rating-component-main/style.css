@@ -23,10 +23,11 @@ body{
 
 p{
     font-size: var(--font-size);
+    font-weight: var(--weight-400);
 }
 
-.thank-you-state{
-    visibility: hidden;
+h1{
+    font-weight: var(--weight-700);
 }
 
 .container{
@@ -44,16 +45,29 @@ p{
     height: 400px;
 }
 
+.form-b{
+    background: var(--Dark-Blue);
+    width: max(30%, 20rem);
+    border-radius: 20px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    visibility: hidden;
+}
+
 .img-div{
-    margin-top: 10%;
+    margin-top: 8%;
     border-radius: 50%;
-    background-color: var(--Medium-Grey);
+    background-color: #3a4655;
     display: flex;
     width: 12px;
     height: 12px;
     padding: 0.8em;
 }
-
 
 .options{
     width: 100%;
@@ -62,9 +76,14 @@ p{
 }
 
 .options p{
-    background-color: var(--Medium-Grey);
+    background-color: #3a4655;
     border-radius: 50%;
-    padding: 0.7em 1em;
+    padding: 0.9em 1.2em;
+    cursor: pointer;
+}
+
+.options p:hover{
+    background-color: var(--Medium-Grey);
 }
 
 .btn{
@@ -76,6 +95,8 @@ p{
     padding-bottom: 0.9em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-top: 5%;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -87,6 +108,20 @@ p{
     color: var(--Light-Grey);
     width: 80%;
 }
-.btn, .desc, h1, .img-div{
+
+.margins{
     margin-left: 10%;
+}
+
+.margins-top{
+    margin-top: 10%;
+}
+
+.result{
+    color: var(--Orange);
+    background: #3a4655;
+    border-radius: 1.7rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 0.3em;
 }
