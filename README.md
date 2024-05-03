@@ -23,3 +23,7 @@ This repository includes solutions to challenges from [Frontend Mentor](https://
 ### 5. Four Card Feature Section 💡
 
 [View Result](https://samahtt.github.io/frontend-mentor-challenges/four-card-feature-section-master/).
+
+### 6. Interactive Rating Component ⭐
+
+[View Result](https://samahtt.github.io/frontend-mentor-challenges/interactive-rating-component-main/).
