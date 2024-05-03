@@ -64,6 +64,12 @@
         let choice = options[i].innerHTML;
         options[i].style.background = 'hsl(25, 97%, 53%)';
 
+        for (let x = 0; x < options.length; x++) {
+          if (options[x] != options[i]) {
+            options[x].style.background = '#3a4655';
+          }
+        }
+
         submit.addEventListener('click', () => {
           form.style.visibility = 'hidden';
           thank_you_state.style.visibility = 'visible';
