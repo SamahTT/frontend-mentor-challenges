@@ -13,7 +13,7 @@
 
 <body>
   <div class="container">
-    <div class="column">
+    <div class="left-column">
       <h1>
         Learn to code by watching others
       </h1>
@@ -22,7 +22,7 @@
         but understanding how developers think is invaluable.
       </p>
     </div>
-    <div class="column">
+    <div class="right-column">
       <div class="purple-div">
         <p>
           Try it free 7 days then $20/mo. thereafter
@@ -30,14 +30,21 @@
       </div>
       <div class="form">
         <input type="text" placeholder="First Name">
+        <p class="margin small-text hidden">First Name cannot be empty</p>
+
         <input type="text" placeholder="Last Name">
+        <p class="margin small-text hidden">Last Name cannot be empty</p>
+
         <input type="text" placeholder="Email Address">
+        <p class="margin small-text hidden">Looks like this is not an email</p>
+
         <input type="text" placeholder="Password">
+        <p class="margin small-text hidden">Password cannot be empty</p>
         <button class="btn">
           Claim your free trial
         </button>
         <p class="small-text">
-          By clicking the button, you are agreeing to our Terms and Services
+          <span class="grey-text">By clicking the button, you are agreeing to our</span><span class="bold-text"> Terms and Services</span>
         </p>
       </div>
     </div>
