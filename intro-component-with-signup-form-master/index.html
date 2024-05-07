@@ -25,31 +25,71 @@
     <div class="right-column">
       <div class="purple-div">
         <p>
-          Try it free 7 days then $20/mo. thereafter
+          <span class="bold-text">Try it free 7 days</span> then $20/mo. thereafter
         </p>
       </div>
       <div class="form">
-        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="First Name" id="first-name">
         <p class="margin small-text hidden">First Name cannot be empty</p>
 
-        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Last Name" id="last-name">
         <p class="margin small-text hidden">Last Name cannot be empty</p>
 
-        <input type="text" placeholder="Email Address">
+        <input type="text" placeholder="Email Address" id="email">
         <p class="margin small-text hidden">Looks like this is not an email</p>
 
-        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Password" id="password">
         <p class="margin small-text hidden">Password cannot be empty</p>
         <button class="btn">
           Claim your free trial
         </button>
         <p class="small-text">
-          <span class="grey-text">By clicking the button, you are agreeing to our</span><span class="bold-text"> Terms and Services</span>
+          <span class="grey-text">By clicking the button, you are agreeing to our</span><span class="bold-text"> Terms
+            and Services</span>
         </p>
       </div>
     </div>
   </div>
+  <script>
+    const f_name = document.getElementById('first-name');
+    const l_name = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const submit = document.querySelector('.btn');
+    const warning = document.querySelectorAll('.small-text');
 
+    submit.addEventListener('click', () => {
+      if (f_name.value == '') {
+        warning[0].classList.remove('hidden');
+        f_name.style.border = '1px solid var(--Red)';
+      }
+      else {
+        warning[0].classList.add('hidden');
+      }
+      if (l_name.value == '') {
+        warning[1].classList.remove('hidden');
+        l_name.style.border = '1px solid var(--Red)';
+      }
+      else {
+        warning[1].classList.add('hidden');
+      }
+      if (email.value == '') {
+        warning[2].classList.remove('hidden');
+        email.style.border = '1px solid var(--Red)';
+      }
+      else {
+        warning[2].classList.add('hidden');
+      }
+      if(password.value == ''){
+          warning[3].classList.remove('hidden');
+          password.style.border = '1px solid var(--Red)';
+      }
+      else{
+        warning[3].classList.add('hidden');
+      }
+    })
+
+  </script>
 </body>
 
 </html>

@@ -32,18 +32,22 @@ body {
 
 .right-column,
 .left-column {
-    width: 36%;
+    width: max(36%, 25em);
 }
 
 .right-column {
     height: 85vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 }
 
 h1{
-    font-size: 2.7em;
+    font-size: clamp(1.3125rem, 0.7284rem + 2.5962vw, 3rem);
+}
+
+p{
+    font-size: 16px;
 }
 
 .form {
@@ -53,17 +57,18 @@ h1{
     align-items: center;
     background: white;
     border-radius: 10px;
-    /**/
-    height: 85%;
+    height: 26em;
 }
 
 input {
     height: 10%;
-    width: 85%;
+    width: 82%;
     border-radius: 7px;
     outline: none;
-    border: 2px solid var(--Grayish-Blue);
+    border: 1px solid var(--Grayish-Blue);
     font-family: var(--font);
+    font-weight: var(--w-600);
+    padding-left: 1.3em;
 }
 
 .input:active{
@@ -79,16 +84,20 @@ input {
     border: 0;
     outline: 0;
     border-radius: 7px;
-    box-shadow: 0px 3px hsl(154, 59%, 31%);; 
+    box-shadow: 0px 3px hsl(154, 59%, 31%);
+    text-transform: uppercase; 
+    font-weight: var(--w-600);
 }
 
 .purple-div {
-    height: 10%;
+    margin-bottom: 2em;
+    height: fit-content;
     width: 100%;
     background: var(--Blue);
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    font-weight: var(--we-400);
 }
 
 .purple-div, .form{
@@ -115,4 +124,17 @@ input {
 
 .hidden{
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        height: max-content;
+        background-image: url('images/bg-intro-mobile.png');
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    h1, p{
+        text-align: center;
+    }
 }
