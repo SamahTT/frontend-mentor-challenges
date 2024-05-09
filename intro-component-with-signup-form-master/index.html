@@ -51,6 +51,7 @@
     </div>
   </div>
   <script>
+    const inputs = document.getElementsByTagName('input');
     const f_name = document.getElementById('first-name');
     const l_name = document.getElementById('last-name');
     const email = document.getElementById('email');
@@ -58,36 +59,50 @@
     const submit = document.querySelector('.btn');
     const warning = document.querySelectorAll('.small-text');
 
+    Array.from(inputs).forEach(function (elem) {
+      elem.addEventListener('click', () => {
+        elem.style.border = '1px solid var(--Blue)';
+      });
+    });
+
     submit.addEventListener('click', () => {
       if (f_name.value == '') {
-        warning[0].classList.remove('hidden');
-        f_name.style.border = '1px solid var(--Red)';
+        addWarning(warning[0], f_name);
       }
       else {
-        warning[0].classList.add('hidden');
+        removeWarning(warning[0], f_name);
       }
       if (l_name.value == '') {
-        warning[1].classList.remove('hidden');
-        l_name.style.border = '1px solid var(--Red)';
+        addWarning(warning[1], l_name);
       }
       else {
-        warning[1].classList.add('hidden');
+        removeWarning(warning[1], l_name);
       }
       if (email.value == '') {
-        warning[2].classList.remove('hidden');
-        email.style.border = '1px solid var(--Red)';
+        addWarning(warning[2], email);
       }
       else {
-        warning[2].classList.add('hidden');
+        removeWarning(warning[2], email);
       }
-      if(password.value == ''){
-          warning[3].classList.remove('hidden');
-          password.style.border = '1px solid var(--Red)';
+      if (password.value == '') {
+        addWarning(warning[3], password);
       }
-      else{
-        warning[3].classList.add('hidden');
+      else {
+        removeWarning(warning[3], password);
       }
     })
+
+    function addWarning(sm_text, input_field) {
+      sm_text.classList.remove('hidden');
+      input_field.style.border = '1px solid var(--Red)';
+      input_field.style.backgroundImage = 'url("images/icon-error.svg")';
+    }
+
+    function removeWarning(sm_text, input_field) {
+      sm_text.classList.add('hidden');
+      input_field.style.border = '1px solid var(--Blue)';
+      input_field.style.backgroundImage = '';
+    }
 
   </script>
 </body>
