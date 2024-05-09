@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-column">
+      <h1>
+        Learn to code by watching others
+      </h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+    <div class="right-column">
+      <div class="purple-div">
+        <p>
+          <span class="bold-text">Try it free 7 days</span> then $20/mo. thereafter
+        </p>
+      </div>
+      <div class="form">
+        <input class='input-icon' type="text" placeholder="First Name" id="first-name">
+        <p class="margin small-text hidden">First Name cannot be empty</p>
+
+        <input class='input-icon' type="text" placeholder="Last Name" id="last-name">
+        <p class="margin small-text hidden">Last Name cannot be empty</p>
+
+        <input class='input-icon' type="text" placeholder="Email Address" id="email">
+        <p class="margin small-text hidden">Looks like this is not an email</p>
+
+        <input class='input-icon' type="text" placeholder="Password" id="password">
+        <p class="margin small-text hidden">Password cannot be empty</p>
+        <button class="btn">
+          Claim your free trial
+        </button>
+        <p class="small-text">
+          <span class="grey-text">By clicking the button, you are agreeing to our</span><span class="bold-text"> Terms
+            and Services</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const inputs = document.getElementsByTagName('input');
+    const f_name = document.getElementById('first-name');
+    const l_name = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const submit = document.querySelector('.btn');
+    const warning = document.querySelectorAll('.small-text');
+
+    Array.from(inputs).forEach(function (elem) {
+      elem.addEventListener('click', () => {
+        elem.style.border = '1px solid var(--Blue)';
+      });
+    });
+
+    submit.addEventListener('click', () => {
+      if (f_name.value == '') {
+        addWarning(warning[0], f_name);
+      }
+      else {
+        removeWarning(warning[0], f_name);
+      }
+      if (l_name.value == '') {
+        addWarning(warning[1], l_name);
+      }
+      else {
+        removeWarning(warning[1], l_name);
+      }
+      if (email.value == '') {
+        addWarning(warning[2], email);
+      }
+      else {
+        removeWarning(warning[2], email);
+      }
+      if (password.value == '') {
+        addWarning(warning[3], password);
+      }
+      else {
+        removeWarning(warning[3], password);
+      }
+    })
+
+    function addWarning(sm_text, input_field) {
+      sm_text.classList.remove('hidden');
+      input_field.style.border = '1px solid var(--Red)';
+      input_field.style.backgroundImage = 'url("images/icon-error.svg")';
+    }
+
+    function removeWarning(sm_text, input_field) {
+      sm_text.classList.add('hidden');
+      input_field.style.border = '1px solid var(--Blue)';
+      input_field.style.backgroundImage = '';
+    }
+
+  </script>
+</body>
+
+</html>
