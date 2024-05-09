@@ -27,3 +27,7 @@ This repository includes solutions to challenges from [Frontend Mentor](https://
 ### 6. Interactive Rating Component ⭐
 
 [View Result](https://samahtt.github.io/frontend-mentor-challenges/interactive-rating-component-main/).
+
+### 7. Intro Component with Sign-up Form 
+
+[View Result](https://samahtt.github.io/frontend-mentor-challenges/intro-component-with-signup-form-master/).
