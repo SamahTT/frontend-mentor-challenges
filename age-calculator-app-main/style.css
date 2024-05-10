@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --font-size: 32px;
+    --font: "Poppins";
+    --weight-400: 400i; 
+    --weight-700: 700i;
+    --weight-800: 800i;
+}
+
+.container {
+    background: var(--Off-white);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    width: max(50%, 25em);
+    height: 28em;
+    background: var(--White);
+    border-radius: 15px;
+    border-bottom-right-radius: 30%;
+}
+
+.input-container {
+    border-bottom: 2px solid var(--Light-grey);
+    width: 90%;
+    margin-left: 5%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.input-container:after{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--Purple);
+    background-image: url('assets/images/icon-arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    content: '';
+    top: 4em;
+    left: 3em;
+}
+
+.label-input{
+    /*outline: 1px solid red;*/
+    height: 5em;
+    width: 20%;
+    margin-right: 2em;
+}
+
+input{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    border: 2px solid var(--Light-grey);
+}
+
+label{
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+    font-weight: var(--weight-700);
+}
+
+h1{
+    font-style: italic;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 20px;
+    margin-left: 5%;
+}
+
+span{
+    color: var(--Purple);
+}
