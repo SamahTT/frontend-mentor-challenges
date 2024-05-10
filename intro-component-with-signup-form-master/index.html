@@ -66,24 +66,31 @@
     });
 
     submit.addEventListener('click', () => {
+      // first name validation 
       if (f_name.value == '') {
         addWarning(warning[0], f_name);
       }
       else {
         removeWarning(warning[0], f_name);
       }
+
+      // last name validation 
       if (l_name.value == '') {
         addWarning(warning[1], l_name);
       }
       else {
         removeWarning(warning[1], l_name);
       }
-      if (email.value == '') {
+
+      // email validation 
+      if (!validateEmail(email.value)) {
         addWarning(warning[2], email);
       }
       else {
         removeWarning(warning[2], email);
       }
+
+      // password validation 
       if (password.value == '') {
         addWarning(warning[3], password);
       }
@@ -91,6 +98,11 @@
         removeWarning(warning[3], password);
       }
     })
+
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
 
     function addWarning(sm_text, input_field) {
       sm_text.classList.remove('hidden');
