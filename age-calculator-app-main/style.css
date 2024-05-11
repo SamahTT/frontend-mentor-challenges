@@ -17,7 +17,7 @@ body {
     --Off-black: hsl(0, 0%, 8%);
     --font-size: 32px;
     --font: "Poppins";
-    --weight-400: 400i; 
+    --weight-400: 400i;
     --weight-700: 700i;
     --weight-800: 800i;
 }
@@ -30,7 +30,7 @@ body {
     justify-content: center;
 }
 
-.calculator{
+.calculator {
     width: max(50%, 25em);
     height: 28em;
     background: var(--White);
@@ -48,9 +48,9 @@ body {
     justify-content: start;
 }
 
-.input-container:after{
-    width: 70px;
-    height: 70px;
+.input-container:after {
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     background-color: var(--Purple);
     background-image: url('assets/images/icon-arrow.svg');
@@ -62,34 +62,38 @@ body {
     left: 3em;
 }
 
-.label-input{
+.input-container:after:hover {
+    background-color: var(--Off-black);
+}
+
+.label-input {
     /*outline: 1px solid red;*/
     height: 5em;
     width: 20%;
     margin-right: 2em;
 }
 
-input{
+input {
     width: 100%;
     height: 70%;
     border-radius: 10px;
     border: 2px solid var(--Light-grey);
 }
 
-label{
+label {
     color: var(--Smokey-grey);
     text-transform: uppercase;
     font-weight: var(--weight-700);
 }
 
-h1{
+h1 {
     font-style: italic;
-    font-size: 80px;
+    font-size: clamp(3.438rem, 2.098rem + 3.571vw, 5.313rem);
     font-weight: 800;
     line-height: 20px;
     margin-left: 5%;
 }
 
-span{
+span {
     color: var(--Purple);
 }
