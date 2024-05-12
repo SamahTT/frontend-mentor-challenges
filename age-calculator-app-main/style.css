@@ -15,11 +15,11 @@ body {
     --Light-grey: hsl(0, 0%, 86%);
     --Smokey-grey: hsl(0, 1%, 44%);
     --Off-black: hsl(0, 0%, 8%);
-    --font-size: 32px;
+    --font-size: 16px;
     --font: "Poppins";
-    --weight-400: 400i;
-    --weight-700: 700i;
-    --weight-800: 800i;
+    --weight-400: 400;
+    --weight-700: 700;
+    --weight-800: 800;
 }
 
 .container {
@@ -59,7 +59,7 @@ body {
     position: relative;
     content: '';
     top: 4em;
-    left: 3em;
+    left: 2em;
 }
 
 .input-container:after:hover {
@@ -67,33 +67,41 @@ body {
 }
 
 .label-input {
-    /*outline: 1px solid red;*/
-    height: 5em;
+    height: 6em;
     width: 20%;
     margin-right: 2em;
 }
 
 input {
     width: 100%;
-    height: 70%;
+    height: 50%;
+    padding-left: 10px;
     border-radius: 10px;
     border: 2px solid var(--Light-grey);
+    font-size: clamp(1rem, 0.648rem + 1.502vw, 2rem);
+    font-weight: var(--weight-700);
 }
 
 label {
     color: var(--Smokey-grey);
     text-transform: uppercase;
     font-weight: var(--weight-700);
+    font-size: var(--font-size);
 }
 
 h1 {
     font-style: italic;
     font-size: clamp(3.438rem, 2.098rem + 3.571vw, 5.313rem);
-    font-weight: 800;
+    font-weight: var(--weight-800);
     line-height: 20px;
     margin-left: 5%;
 }
 
 span {
     color: var(--Purple);
+}
+
+.small-text{
+    color: var(--Light-red);
+    font-size: 11px;
 }
