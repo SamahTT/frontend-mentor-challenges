@@ -48,21 +48,22 @@ body {
     justify-content: start;
 }
 
-.input-container:after {
-    width: 3rem;
-    height: 3rem;
+.btn {
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
+    border: 0;
     background-color: var(--Purple);
     background-image: url('assets/images/icon-arrow.svg');
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    content: '';
     top: 4em;
     left: 2em;
+    cursor: pointer;
 }
 
-.input-container:after:hover {
+.btn:hover {
     background-color: var(--Off-black);
 }
 
@@ -93,7 +94,7 @@ h1 {
     font-style: italic;
     font-size: clamp(3.438rem, 2.098rem + 3.571vw, 5.313rem);
     font-weight: var(--weight-800);
-    line-height: 20px;
+    line-height: 30px;
     margin-left: 5%;
 }
 
@@ -103,5 +104,7 @@ span {
 
 .small-text{
     color: var(--Light-red);
-    font-size: 11px;
+    font-size: 10px;
+    margin-top: 3px;
+    width: max-content;
 }
