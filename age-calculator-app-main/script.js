@@ -40,10 +40,10 @@ function check_input(x){
             x[i].style.border = '2px solid var(--Light-red)';
             warning_text[i].textContent = 'This field cannot be empty';
         }
-        //else if (!isDigit(inputs[i].value)) {
-        //    inputs[i].style.border = '2px solid var(--Light-red)';
-        //    warning_text[i].textContent = 'Invalid value';
-        ///}
+        else if (!Number.isInteger(Number(inputs[i].value))) {
+           inputs[i].style.border = '2px solid var(--Light-red)';
+           warning_text[i].textContent = 'Invalid value';
+        }
         else {
             inputs[i].style.border = ''; // Reset border
             warning_text[i].textContent = ''; // Clear warning text
@@ -51,6 +51,4 @@ function check_input(x){
     }
 }
 
-function isDigit(value) {
-    return /^\d$/.test(value);
-}
+
