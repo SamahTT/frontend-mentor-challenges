@@ -1,54 +1,80 @@
 const inputs = document.getElementsByTagName('input');
+const labels = document.getElementsByTagName('label');
 const warning_text = document.querySelectorAll('.small-text');
 const btn = document.querySelector('.btn');
 const year_result = document.querySelector('.y');
 const month_result = document.querySelector('.m');
 const day_result = document.querySelector('.d');
 const date = new Date();
+const current_year = date.getFullYear();
+const current_month = date.getMonth();
+const current_day = date.getDay();
+let flag = false;
 
 for (let i = 0; i < inputs.length; i++) {
 
-    // Event listener for input 
-    inputs[i].addEventListener('focus', () => {
-        inputs[i].style.border = '2px solid var(--Purple)';
-    });
+    inputs[i].addEventListener('input', () => {
+        // store the value for easy access
+        let value = inputs[i].value;
+        let warning_msg = '';
+
+        // Test different cases of invalid input 
+        if (value === '') {
+            warning_msg = 'This field is required';
+        }
+        else if (isNaN(value)) {
+            warning_msg = 'Must be a number';
+        }
+        else if (i == 2 && value > current_year) {
+            warning_msg = 'Must be in the past';
+        }
+        else if (i == 2 && value < current_year - 500) {
+            warning_msg = 'This is way too old';
+        }
+        else if (i == 1 && (value > 12 || value < 1)) {
+            warning_msg = 'Invalid Month';
+        }
+        else if (i == 0 && (value > 31 || value < 1)) {
+            warning_msg = 'Invalid Day';
+        }
+
+        // Check mesaage content to add warning 
+        if (warning_msg != '') {
+            add_warning(i, warning_msg);
+        }
+        // Clear warning 
+        else {
+            inputs[i].style.border = '';
+            warning_text[i].textContent = '';
+            labels[i].style.color = 'var(--Smokey-grey)';
+        }
+    })
 }
 
-btn.addEventListener('click', () => {
-    check_input(inputs);
+/*btn.addEventListener('click', () => {
+// check if all warnings are empty 
+// calcualte age 
+});*/
 
-    const current_year = date.getFullYear();
-    const current_month = date.getMonth();
-    const current_day = date.getDay();
+function add_warning(x, msg) {
+    inputs[x].style.border = '2px solid var(--Light-red)';
+    labels[x].style.color = 'var(--Light-red)';
+    warning_text[x].textContent = msg;
+}
+
+/*function clac_age() {
     const years = current_year - inputs[2].value;
     const months = current_month - inputs[1].value;
-    const days = current_day - inputs[0].value; 
+    const days = current_day - inputs[0].value;
     console.log(years + months + days);
-    if(months){
+    if (months < current_months) {
         year_result.textContent = years;
-        month_result.textContent = months; 
+        month_result.textContent = months;
         day_result.textContent = days;
     }
-    //else if(months == 0){
+    else if(
+}*/
 
-    //}
-});
 
-function check_input(x){
-    for (let i = 0; i < x.length; i++) {
-        if (x[i].value === '') {
-            x[i].style.border = '2px solid var(--Light-red)';
-            warning_text[i].textContent = 'This field cannot be empty';
-        }
-        else if (!Number.isInteger(Number(inputs[i].value))) {
-           inputs[i].style.border = '2px solid var(--Light-red)';
-           warning_text[i].textContent = 'Invalid value';
-        }
-        else {
-            inputs[i].style.border = ''; // Reset border
-            warning_text[i].textContent = ''; // Clear warning text
-        }
-    }
-}
 
 
