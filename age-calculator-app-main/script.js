@@ -9,7 +9,7 @@ const date = new Date();
 const current_year = date.getFullYear();
 const current_month = date.getMonth();
 const current_day = date.getDay();
-let flag = false;
+let flag;
 
 for (let i = 0; i < inputs.length; i++) {
 
@@ -41,6 +41,9 @@ for (let i = 0; i < inputs.length; i++) {
         // Check mesaage content to add warning 
         if (warning_msg != '') {
             add_warning(i, warning_msg);
+            year_result.textContent = '--';
+            month_result.textContent = '--';
+            day_result.textContent = '--';
         }
         // Clear warning 
         else {
@@ -51,10 +54,24 @@ for (let i = 0; i < inputs.length; i++) {
     })
 }
 
-/*btn.addEventListener('click', () => {
-// check if all warnings are empty 
-// calcualte age 
-});*/
+btn.addEventListener('click', () => {
+    // check if all warnings are empty 
+    for (let i = 0; i < warning_text.length; i++) {
+        if (warning_text[i].textContent != '') {
+            flag = false;
+            break;
+        }
+        else {
+            flag = true;
+        }
+    }
+    if (flag) {
+        // calcualte age 
+        calc_age();
+    }
+
+
+});
 
 function add_warning(x, msg) {
     inputs[x].style.border = '2px solid var(--Light-red)';
@@ -62,18 +79,21 @@ function add_warning(x, msg) {
     warning_text[x].textContent = msg;
 }
 
-/*function clac_age() {
+function calc_age() {
     const years = current_year - inputs[2].value;
     const months = current_month - inputs[1].value;
     const days = current_day - inputs[0].value;
-    console.log(years + months + days);
-    if (months < current_months) {
+    //console.log(years + months + days);
+    if (months >= 1 || (months == 0 && (days == 0 || days >= 1))) {
         year_result.textContent = years;
         month_result.textContent = months;
         day_result.textContent = days;
     }
-    else if(
-}*/
+    //else if(months < 0){
+    //year_result.textContent = years - 1;
+    //month_result.textContent = ;
+    //}
+}
 
 
 
