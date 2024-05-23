@@ -89,10 +89,11 @@ function calc_age() {
         month_result.textContent = months;
         day_result.textContent = days;
     }
-    //else if(months < 0){
-    //year_result.textContent = years - 1;
-    //month_result.textContent = ;
-    //}
+    else if (months < 0) {
+        year_result.textContent = years - 1;
+        month_result.textContent = 12 + months;
+        day_result.textContent = '0';
+    }
 }
 
 
