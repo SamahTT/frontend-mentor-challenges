@@ -80,20 +80,32 @@ function add_warning(x, msg) {
 }
 
 function calc_age() {
-    const years = current_year - inputs[2].value;
-    const months = current_month - inputs[1].value;
-    const days = current_day - inputs[0].value;
-    //console.log(years + months + days);
-    if (months >= 1 || (months == 0 && (days == 0 || days >= 1))) {
-        year_result.textContent = years;
-        month_result.textContent = months;
-        day_result.textContent = days;
+    const current_date = new Date();
+    const current_year = current_date.getFullYear();
+    const current_month = current_date.getMonth() + 1;
+    const current_day = current_date.getDate();
+
+    const birth_day = parseInt(inputs[0].value);
+    const birth_month = parseInt(inputs[1].value);
+    const birth_year = parseInt(inputs[2].value);
+
+    let years = current_year - birth_year;
+    let months = current_month - birth_month;
+    let days = current_day - birth_day;
+
+    if (days < 0) {
+        months -= 1;
+        days += new Date(current_year, current_month - 1, 0).getDate();
     }
-    else if (months < 0) {
-        year_result.textContent = years - 1;
-        month_result.textContent = 12 + months;
-        day_result.textContent = '0';
+    
+    if (months < 0) {
+        years -= 1;
+        months += 12;
     }
+
+    year_result.textContent = years;
+    month_result.textContent = months;
+    day_result.textContent = days;
 }
 
 

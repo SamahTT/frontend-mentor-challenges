@@ -49,8 +49,8 @@ body {
 }
 
 .btn {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.7rem;
+    height: 3.7rem;
     border-radius: 50%;
     border: 0;
     background-color: var(--Purple);
@@ -111,6 +111,6 @@ span {
 
 @media only screen and (max-width:750px){
     .btn{
-        left: 1em;
+        left: 0.6em;
     }
 }
