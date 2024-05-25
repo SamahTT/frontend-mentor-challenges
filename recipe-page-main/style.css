@@ -9,6 +9,16 @@
     --Dark-Charcoal: hsl(24, 5%, 18%);
 }
 
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf'); 
+}
+
+@font-face {
+    font-family: 'Young-Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
 body {
     box-sizing: border-box;
     padding: 0;
@@ -29,8 +39,9 @@ body {
 }
 
 img{
-    width: 80%;
     border-radius: 15px;
+    margin: 5%;
+    width: 90%;
 }
 
 h1{
@@ -43,4 +54,23 @@ h2 {
 
 p{
     color: var(--Light-Grey);
+}
+
+h1, h2, p, ul, ol, table{
+    margin-left: 5%;
+    width: 90%;
+}
+
+h1, h2{
+    font-family: 'Young-Serif';
+    font-weight: 700;
+}
+
+p, ol, ul, table{
+    font-family: 'Outfit';
+    font-weight: 400;
+}
+
+td{
+    border-bottom: 1px solid var(--Light-Grey);
 }
