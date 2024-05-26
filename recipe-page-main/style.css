@@ -30,6 +30,8 @@ body {
     align-items: center;
     justify-content: center;
     background: var(--Eggshell);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .column {
@@ -39,9 +41,22 @@ body {
 }
 
 img{
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 5%;
     width: 90%;
+}
+
+.card{
+    background: var(--Rose-White);
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    padding: 5px;
+}
+
+.card p{
+    color: var(--Dark-Raspberry);
+    font-weight: 600;
 }
 
 h1{
@@ -52,25 +67,47 @@ h2 {
     color: var(--Nutmeg);
 }
 
-p{
-    color: var(--Light-Grey);
+
+h1, h2, p, table{
+    margin-left: 5%;
+    width: 90%;
 }
 
-h1, h2, p, ul, ol, table{
-    margin-left: 5%;
+ol, ul{
     width: 90%;
 }
 
 h1, h2{
     font-family: 'Young-Serif';
-    font-weight: 700;
+    font-weight: 600;
 }
 
 p, ol, ul, table{
     font-family: 'Outfit';
     font-weight: 400;
+    font-size: 16px;
+    color: var(--Wenge-Brown);
+}
+
+tr :nth-child(2n) {
+    color: var(--Nutmeg);
+    font-weight: 600;
 }
 
 td{
     border-bottom: 1px solid var(--Light-Grey);
+}
+
+hr{
+    width: 90%;
+    opacity: 40%;
+    background-color: var(--Light-Grey);
+}
+
+ul li::marker{
+    color: var(--Nutmeg);
+}
+
+ol li::marker{
+    color: var(--Nutmeg);
 }
