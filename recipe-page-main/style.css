@@ -96,7 +96,9 @@ tr :nth-child(2n) {
 
 td{
     border-bottom: 1px solid var(--Light-Grey);
+    padding: 10px;
 }
+
 
 hr{
     width: 90%;
@@ -110,4 +112,13 @@ ul li::marker{
 
 ol li::marker{
     color: var(--Nutmeg);
+}
+
+li{
+    padding-left: 1.1em;
+    padding-bottom: 1.1em;
+}
+
+.bold-text{
+    font-weight: 600;
 }
