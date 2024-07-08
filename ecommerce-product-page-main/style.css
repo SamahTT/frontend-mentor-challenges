@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black-lightbox: hsla(0, 0%, 0%, 0.75);
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans';
+}
+
+.nav-bar {
+    height: 15vh;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid var(--black-lightbox);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list, .nav-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-list {
+    padding-left: 0;
+    list-style-type: none;
+    width: 50%;
+}
+
+.logo {
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.cart-icon {
+    background-image: url('images/icon-cart.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+}
+
+.avatar {
+    background-image: url('images/image-avatar.png');
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+.avatar:hover{
+    outline: 2px solid var(--orange);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
