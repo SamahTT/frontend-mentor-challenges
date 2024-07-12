@@ -39,9 +39,22 @@ body {
     width: 50%;
 }
 
+.nav-list li{
+    cursor: pointer;
+}
+
+.nav-list li:hover{
+    text-underline-offset: 2.4em;
+    text-decoration: underline 3px var(--orange);
+}
+
 .logo {
     font-weight: 700;
     text-transform: lowercase;
+}
+
+.logo:hover{
+    text-decoration: underline 3px transparent;
 }
 
 .cart-icon {
@@ -63,6 +76,7 @@ body {
 
 .avatar:hover{
     outline: 2px solid var(--orange);
+    cursor: pointer;
 }
 
 .attribution {
@@ -72,4 +86,13 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.section{
+    height: 80vh;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
