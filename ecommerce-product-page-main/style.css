@@ -126,3 +126,27 @@ body {
 .section > *{
     flex-basis: 36%;
 }
+
+/* button */
+.btn-div{
+    display: flex;
+    width: 100%;
+}
+
+.qty-btn{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--light-grayish-blue);
+    color: var(--very-dark-blue);
+    border-radius: 15px;
+    border: 0;
+    padding: 10px 20px;
+    width: 40%;
+}
+
+
+.qty-p, .qty-m{
+    cursor: pointer;
+}
+/**/
