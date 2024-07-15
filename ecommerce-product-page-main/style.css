@@ -145,6 +145,17 @@ body {
     width: 40%;
 }
 
+.add-to-cart{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--orange);
+    color: var(--very-dark-blue);
+    border-radius: 15px;
+    border: 0;
+    padding: 10px 20px;
+    width: 60%;
+}
 
 .qty-p, .qty-m{
     cursor: pointer;
