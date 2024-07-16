@@ -127,6 +127,23 @@ body {
     flex-basis: 36%;
 }
 
+/*desc*/
+h1, .price{
+    color: var(--very-dark-blue);
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.prev-price, h3{
+    color: var(--dark-grayish-blue);
+    font-weight: 700;
+}
+
+.prev-price{
+    text-decoration: line-through;
+}
+/**/
+
 /* button */
 .btn-div{
     display: flex;
