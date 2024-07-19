@@ -1,4 +1,4 @@
-// Quantity button 
+// Quantity Button 
 let minus = document.getElementById('minus')
 let plus = document.getElementById('plus')
 let qty_result = document.querySelector('.qty-btn span')
@@ -19,7 +19,21 @@ function increase_qty(){
     qty_result.textContent = qty
 }
 
-// Product Image 
+// Add Product to Cart
+let cart_btn = document.querySelector('.add-to-cart')
+let currentCartItems = 0
+
+cart_btn.addEventListener('click', addItem)
+
+function addItem(){
+    if(qty > 0){
+        currentCartItems += qty
+        console.log('Items in cart = '+ currentCartItems)
+        document.documentElement.style.setProperty('--cart-content', currentCartItems.toString())
+    }
+}
+
+// Product Image Interactivity 
 let product_image = document.querySelector('.product-img')
 let thumbnails = document.querySelectorAll('.sm-img')
 thumbnails.forEach((thumb) => thumb.addEventListener('click', display_image))
