@@ -39,7 +39,9 @@ let thumbnails = document.querySelectorAll('.sm-img')
 thumbnails.forEach((thumb) => thumb.addEventListener('click', display_image))
 
 function display_image(event){
+    thumbnails.forEach((thumbnail) => thumbnail.classList.remove("sm-img-active"))
     let thumb = event.currentTarget
+    thumb.classList.add("sm-img-active")
     if(thumb.alt == '1'){
         product_image.style.backgroundImage = 'url("images/image-product-1.jpg")'
     }
