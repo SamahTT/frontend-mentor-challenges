@@ -160,6 +160,14 @@ h1, .price{
 .prev-price{
     text-decoration: line-through;
 }
+
+.percentage{
+    background: var(--very-dark-blue);
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
 /**/
 
 /* button */
@@ -168,15 +176,19 @@ h1, .price{
     width: 100%;
 }
 
+button{
+    border-radius: 15px;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 .qty-btn{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     background: var(--light-grayish-blue);
     color: var(--very-dark-blue);
-    border-radius: 15px;
-    border: 0;
-    padding: 10px 20px;
     width: 40%;
 }
 
@@ -186,13 +198,20 @@ h1, .price{
     align-items: center;
     background: var(--orange);
     color: var(--very-dark-blue);
-    border-radius: 15px;
-    border: 0;
-    padding: 10px 20px;
     width: 60%;
 }
 
-.qty-p, .qty-m{
-    cursor: pointer;
-}
 /**/
+
+.cart-content{
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cart-content div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
