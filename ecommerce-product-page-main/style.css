@@ -181,6 +181,8 @@ button{
     border: 0;
     padding: 10px 20px;
     cursor: pointer;
+    font-family: 'Kumbh Sans';
+    font-weight: 500;
 }
 
 .qty-btn{
@@ -213,5 +215,17 @@ button{
 .cart-content div{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.sm-img-cart{
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+}
+
+.cart-content button{
+    background-color: var(--orange);
+    width: 80%;
 }

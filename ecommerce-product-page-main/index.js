@@ -22,6 +22,10 @@ function increase_qty(){
 // Add Product to Cart
 let cart_btn = document.querySelector('.add-to-cart')
 let currentCartItems = 0
+//Upadte cart items count 
+let cart_items_count = document.querySelector('.items-count')
+//Update items total
+let items_total = document.querySelector('.cart-total')
 
 cart_btn.addEventListener('click', addItem)
 
@@ -30,6 +34,8 @@ function addItem(){
         currentCartItems += qty
         console.log('Items in cart = '+ currentCartItems)
         document.documentElement.style.setProperty('--cart-content', currentCartItems.toString())
+        cart_items_count.textContent = currentCartItems
+        items_total.textContent = currentCartItems * 125
     }
 }
 
