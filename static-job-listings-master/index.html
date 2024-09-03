@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Job Listings</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="job-listing-section">
+
+    <div class="search-bar">
+      <div class="tags" id="search-list-el">
+        <span class="tag">
+          Frontend
+          <img src="images/icon-remove.svg" alt="" class="remove">
+        </span>
+        <span class="tag">Senior
+          <img src="images/icon-remove.svg" alt="" class="remove">
+        </span>
+        <span class="tag">HTML
+          <img src="images/icon-remove.svg" alt="" class="remove">
+        </span>
+        <span class="tag">CSS
+          <img src="images/icon-remove.svg" alt="" class="remove">
+        </span>
+      </div>
+      <a role="button" id="clear-el">Clear</a>
+    </div>
+
+    <div class="job-item left-border">
+      <div class="avatar"></div>
+      <div class="job-desc">
+        <h3>Photosnap <span class="blue-border">New!</span> <span class="black-border">Featured</span></h3>
+        <h2>Senior Frontend Developer</h2>
+        <ul>
+          <li class="no-style-li">1d ago</li>
+          <li>Full Time</li>
+          <li>USA only</li>
+        </ul>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Senior</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+    <div class="job-item left-border">
+      <div class="avatar" id="Manage"></div>
+      <div class="job-desc">
+        <h3>Manage <span class="blue-border">New!</span> <span class="black-border">Featured</span></h3>
+        <h2>Fullstack Developer</h2>
+        <ul>
+          <li class="no-style-li">1d ago</li>
+          <li>Part Time</li>
+          <li>Remote</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Fullstack</span>
+        <span class="tag">Midweight</span>
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="Account"></div>
+      <div class="job-desc">
+        <h3>Account <span class="blue-border">New!</span></h3>
+        <h2>Junior Frontend Developer</h2>
+        <ul>
+          <li class="no-style-li">2d ago</li>
+          <li>Part Time</li>
+          <li>USA only</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Junior</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Sass</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="MyHome"></div>
+      <div class="job-desc">
+        <h3>MyHome</h3>
+        <h2>Junior Frontend Developer</h2>
+        <ul>
+          <li class="no-style-li">5d ago</li>
+          <li>Contract</li>
+          <li>USA only</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Junior</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="Loop"></div>
+      <div class="job-desc">
+        <h3>Loop Studios</h3>
+        <h2>Software Engineer</h2>
+        <ul>
+          <li class="no-style-li">1w ago</li>
+          <li>Full Time</li>
+          <li>Worldwide</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Fullstack</span>
+        <span class="tag">Midweight</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Ruby</span>
+        <span class="tag">Sass</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="FaceIt"></div>
+      <div class="job-desc">
+        <h3>FaceIt</h3>
+        <h2>Junior Backend Developer</h2>
+        <ul>
+          <li class="no-style-li">2w ago</li>
+          <li>Full Time</li>
+          <li>UK only</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Backend</span>
+        <span class="tag">Junior</span>
+        <span class="tag">Ruby</span>
+        <span class="tag">RoR</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="Shortly"></div>
+      <div class="job-desc">
+        <h3>Shortly</h3>
+        <h2>Junior Developer</h2>
+        <ul>
+          <li class="no-style-li">2w ago</li>
+          <li>Full Time</li>
+          <li>Worldwide</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Junior</span>
+        <span class="tag">HTML</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Sass</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="Insure"></div>
+      <div class="job-desc">
+        <h3>Insure</h3>
+        <h2>Junior Frontend Developer</h2>
+        <ul>
+          <li class="no-style-li">2w ago</li>
+          <li>Full Time</li>
+          <li>USA only</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Junior</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Vue</span>
+        <span class="tag">Sass</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="Eyecam"></div>
+      <div class="job-desc">
+        <h3>Eyecam Co.</h3>
+        <h2>Full Stack Engineer</h2>
+        <ul>
+          <li class="no-style-li">3w ago</li>
+          <li>Full Time</li>
+          <li>Worldwide</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Fullstack</span>
+        <span class="tag">Midweight</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">Django</span>
+      </div>
+    </div>
+    
+    <div class="job-item">
+      <div class="avatar" id="TheAirFilter"></div>
+      <div class="job-desc">
+        <h3>The Air Filter Company</h3>
+        <h2>Front-end Dev</h2>
+        <ul>
+          <li class="no-style-li">1mo ago</li>
+          <li>Part Time</li>
+          <li>Worldwide</li>
+        </ul>
+      </div>
+      <div class="tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Junior</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Sass</span>
+      </div>
+    </div>
+    
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

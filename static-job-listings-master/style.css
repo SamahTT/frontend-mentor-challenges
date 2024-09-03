@@ -1,0 +1,184 @@
+:root {
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --light-grayish-cyan-bg: hsl(180, 52%, 96%);
+    --light-grayish-cyan-filter: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+.header{
+    background-image: url('images/bg-header-desktop.svg');
+    background-color: var(--desaturated-dark-cyan);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 15vh;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.job-listing-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    background-color: var(--light-grayish-cyan-bg);
+}
+
+.search-bar{
+    height: 50px;
+    width: 80%;
+    background-color: #ffff;
+    padding:  6px 12px;
+    border-radius: 5px;
+    box-shadow: var(--light-grayish-cyan-bg) 0px 4px 6px -1px, var(--desaturated-dark-cyan) 0px 2px 4px -1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar a{
+    color: var(--desaturated-dark-cyan);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.job-item{
+    height: max-content;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: first;
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 80%;
+    box-shadow: var(--light-grayish-cyan-bg) 0px 4px 6px -1px, var(--desaturated-dark-cyan) 0px 2px 4px -1px;
+}
+
+.avatar{
+    border-radius: 50%;
+    background-image: url('images/photosnap.svg');
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: contain;
+    margin-right: 20px;
+}
+
+.job-desc{
+    width: 60%;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 700px;
+    color: var(--desaturated-dark-cyan);
+}
+
+.blue-border{
+    border-radius: 1.7em;
+    background: var(--desaturated-dark-cyan);
+    color: #ffff;
+    padding: 5px 10px;
+}
+
+.black-border{
+    border-radius: 1.7em;
+    background: var(--very-dark-grayish-cyan);
+    color: #ffff;
+    padding: 5px 10px;
+}
+
+h2{
+    color: var(--very-dark-grayish-cyan);
+    font-size: 22px;
+}
+
+ul{
+    color: var(--dark-grayish-cyan);
+    display: inline-flex;
+    padding-left: 0;
+}
+
+li{
+    margin: 0 12px;
+    font-weight: 500;
+}
+
+.no-style-li{
+    list-style: none;
+    margin-left: 0;
+}
+
+.tags{
+    display: inline-flex;
+}
+
+.tag img {
+    margin-left: 5px;
+}
+
+.tag{
+    background-color: var(--light-grayish-cyan-bg);
+    border-radius: 5px;
+    color: var(--desaturated-dark-cyan);
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.tag:hover{
+    background-color: var(--desaturated-dark-cyan);
+    color: #ffff;
+}
+
+.left-border{
+    border-left: 4px solid var(--desaturated-dark-cyan);
+}
+
+#Manage{
+    background-image: url('images/manage.svg');
+}
+
+#Account{
+    background-image: url('images/account.svg');
+}
+
+#MyHome{
+    background-image: url('images/myhome.svg');
+}
+
+#Loop{
+    background-image: url('images/loop-studios.svg');
+}
+
+#FaceIt{
+    background-image: url('images/faceit.svg');
+}
+
+#Shortly{
+    background-image: url('images/shortly.svg');
+}
+
+#Insure{
+    background-image: url('images/insure.svg');
+}
+
+#Eyecam{
+    background-image: url('images/eyecam-co.svg');
+}
+
+#TheAirFilter{
+    background-image: url('images/the-air-filter-company.svg');
+}
