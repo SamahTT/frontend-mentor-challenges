@@ -11,7 +11,7 @@
     background-color: var(--desaturated-dark-cyan);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     height: 15vh;
 }
 
@@ -119,7 +119,8 @@ li{
 }
 
 .tags{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tag img {
@@ -181,4 +182,20 @@ li{
 
 #TheAirFilter{
     background-image: url('images/the-air-filter-company.svg');
+}
+
+@media only screen and (max-width: 600px) {
+    .job-item{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .job-desc{
+        width: 100%;
+        border-bottom: 2px solid var(--light-grayish-cyan-filter);
+    }
+
+    .avatar{
+        margin-top: -20px;
+    }
 }
