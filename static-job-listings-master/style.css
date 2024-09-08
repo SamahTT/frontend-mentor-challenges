@@ -105,7 +105,8 @@ h2{
 ul{
     color: var(--dark-grayish-cyan);
     display: inline-flex;
-    padding-left: 0;
+    padding: 0;
+    margin-top: 0;
 }
 
 li{
@@ -132,7 +133,7 @@ li{
     border-radius: 5px;
     color: var(--desaturated-dark-cyan);
     padding: 5px 10px;
-    margin-right: 5px;
+    margin: 5px 5px;
     font-weight: 700;
     cursor: pointer;
     display: flex;
@@ -188,14 +189,16 @@ li{
     .job-item{
         flex-direction: column;
         align-items: start;
+        margin-top: 60px;
     }
 
     .job-desc{
         width: 100%;
         border-bottom: 2px solid var(--light-grayish-cyan-filter);
+        margin-bottom: 10px;
     }
 
     .avatar{
-        margin-top: -20px;
+        margin-top: -38px;
     }
 }
