@@ -3,7 +3,7 @@ const removeBtn = document.querySelectorAll('.remove')
 const clearBtn = document.getElementById('clear-el')
 const tags = document.querySelectorAll('.job-item .tag')
 const jobItems = document.querySelectorAll('.job-item')
-const jobItemsNames = document.querySelectorAll('.job-item h3');
+const jobItemsNames = document.querySelectorAll('.job-item .company');
 
 // Delete single element from search bar 
 for (let i = 0; i < removeBtn.length; i++) {
@@ -112,15 +112,12 @@ function searchJobs() {
             }
         }
     }
-
-    //console.log('Filtered Company Names:', companyNames);
     renderJobs(companyNames)
 }
 
 function renderJobs(companyNames){
     console.log('Im in render jobs')
     console.log(companyNames)
-    console.log(jobItems)
     for(let i = 0; i < jobItemsNames.length ; i++){
         if(!companyNames.includes(jobItemsNames[i].textContent)){
             jobItems[i].style.display = 'none';
@@ -130,5 +127,6 @@ function renderJobs(companyNames){
         }
     }
 }
+  
 
 
