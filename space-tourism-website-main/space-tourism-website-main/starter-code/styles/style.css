@@ -100,6 +100,7 @@ nav li:hover{
 /*
 LAYOUT
 */
+
 section{
     padding: 250px 0;
 }
@@ -113,6 +114,9 @@ section{
     width:  65%;
 }
 
+.planet-info{
+    display: inline-block;
+}
 
 /*
 TYPOGRAPHY
@@ -147,6 +151,7 @@ BUTTONS
 */
 
 .btn-lg{
+    text-decoration: none;
     font-family: 'Cinzel', serif;
     display: flex;
     align-items: center;
@@ -159,6 +164,7 @@ BUTTONS
     color: black;
     outline: 90px solid rgba(249, 249, 249, 0);
     transition: outline-color 0.5s ease;
+    cursor: pointer;
 }
 
 .btn-lg:hover{
