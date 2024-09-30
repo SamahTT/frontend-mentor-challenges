@@ -67,10 +67,13 @@ nav::after{
     top: 50%;
     left: -250px;
 }
-
+ 
 
 nav ul{
     height: 85px;
+}
+
+.nav-list{
     list-style-type: none;
     padding: 0;
     outline: 1px solid blue;
@@ -79,22 +82,21 @@ nav ul{
     align-items: center;
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
-}
-
-nav li{
-    display: block;
+.list-item{
+    display: inline-flex;
     outline: 1px solid yellow;
     height: inherit;
     box-sizing: border-box;
-    display: flex;
     align-items: center; 
 }
 
-nav li:hover{
+.list-item:hover{
     border-bottom: 3px solid white;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
 }
 
 /*
@@ -117,6 +119,8 @@ section{
 .planet-info{
     display: inline-block;
 }
+
+
 
 /*
 TYPOGRAPHY
