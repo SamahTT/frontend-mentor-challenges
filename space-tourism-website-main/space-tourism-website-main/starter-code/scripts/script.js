@@ -1,9 +1,10 @@
 const nav_items = document.querySelectorAll('#nav-list-el .list-item');
 const main_el = document.querySelector('#unique-content')
 
+
 nav_items.forEach(function (item) {
     item.addEventListener('click', function () {
-        // This will call the function when the event is triggered
+        // This will call the functions when the event is triggered
         changeBackground(item)  
         changePageContent(item)
     });
@@ -23,16 +24,23 @@ function changeBackground(navItem) {
         document.body.style.backgroundImage = 'url("./assets/home/background-home-desktop.jpg")'
 }
 
+const pageMap = {
+    destination: './destination-moon.html',
+    crew: './crew-commander.html',
+    technology: './technology-capsule.html',
+    home: './home.html' // Adjust as needed
+};
+
 function changePageContent(navItem) {
-    fetch('./destination-moon.html')
+    fetch(pageMap[navItem.id] || pageMap.home)
         .then(response => response.text())
         .then(data => {
             // Create a temporary DOM parser to extract content
             const parser = new DOMParser();
             const doc = parser.parseFromString(data, 'text/html');
 
-            // Extract the body content from dest.html
-            const newContent = doc.main.innerHTML
+            // Extract the main content
+            const newContent = doc.querySelector('main').innerHTML;
 
             // Replace the current content of the index page
             main_el.innerHTML = newContent
