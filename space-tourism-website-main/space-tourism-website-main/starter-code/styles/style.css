@@ -24,7 +24,7 @@ body{
 :root{
     --text-color: #ffffff;
     --text-color-2: #A0A0A0;; 
-    --text-color-3: #4DA9FF; 
+    --text-color-3: #97c0fcb8; 
 }
 
 /*
@@ -57,7 +57,6 @@ nav{
     position: relative;
 }
 
-
 nav::after{
     content: '';
     position: absolute;
@@ -68,7 +67,6 @@ nav::after{
     left: -250px;
 }
  
-
 nav ul{
     height: 85px;
 }
@@ -112,14 +110,27 @@ section{
     margin: 0 auto;
 }
 
-.text-wrapper{
-    width:  65%;
+.text-wrapper, img{
+    width: max(40%, 20em);
 }
 
 .planet-info{
     display: inline-block;
 }
 
+.dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #A0A0A0;
+}
+
+.dots{
+    display: flex;
+    width: 120px;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 /*
@@ -148,6 +159,10 @@ h1, h3{
 p{
     max-width: 500px;
     text-align: justify;
+}
+
+.blue-paragraph{
+    color: var(--text-color-3);
 }
 
 /*
