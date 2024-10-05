@@ -32,7 +32,7 @@ const pageMap = {
 };
 
 function changePageContent(navItem) {
-    fetch(pageMap[navItem.id] || pageMap.home)
+    fetch(pageMap[navItem.id])
         .then(response => response.text())
         .then(data => {
             // Create a temporary DOM parser to extract content
