@@ -1,14 +1,20 @@
-const nav_items = document.querySelectorAll('#nav-list-el .list-item');
+const nav_items = document.querySelectorAll('#nav-list-el .list-item')
 const main_el = document.querySelector('#unique-content')
 
+const pageMap = {
+    destination: './destination-moon.html',
+    crew: './crew-commander.html',
+    technology: './technology-vehicle.html',
+    home: './home.html'
+}
 
 nav_items.forEach(function (item) {
     item.addEventListener('click', function () {
         // This will call the functions when the event is triggered
-        changeBackground(item)  
+        changeBackground(item)
         changePageContent(item)
-    });
-});
+    })
+})
 
 function changeBackground(navItem) {
     if (navItem.id === "destination")
@@ -24,13 +30,6 @@ function changeBackground(navItem) {
         document.body.style.backgroundImage = 'url("./assets/home/background-home-desktop.jpg")'
 }
 
-const pageMap = {
-    destination: './destination-moon.html',
-    crew: './crew-commander.html',
-    technology: './technology-capsule.html',
-    home: './home.html' // Adjust as needed
-};
-
 function changePageContent(navItem) {
     fetch(pageMap[navItem.id])
         .then(response => response.text())
@@ -44,6 +43,20 @@ function changePageContent(navItem) {
 
             // Replace the current content of the index page
             main_el.innerHTML = newContent
+
+            if (navItem.id == 'destination') {
+                const destination_nav = document.querySelectorAll('.destination-nav')
+                // Change content in destination page 
+                destination_nav.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        console.log('content changed')
+                    })
+                })
+            }
+
+            else if (navItem.id == "crew"){
+                // manipulate content 
+            }
         })
         .catch(error => console.error('Error fetching data', error))
 }
