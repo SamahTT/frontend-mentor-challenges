@@ -1,14 +1,25 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/*400, 500, 700*/
+
+:root {
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+    --White: #ffffff;
 }
 
-.container{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+.container {
     height: 100vh;
 }
 
-.header{
+.header {
     height: 30vh;
     background-image: url("images/pattern-bg-desktop.png");
     background-repeat: no-repeat;
@@ -16,19 +27,77 @@ body{
     position: relative;
 }
 
-.map-bg{
+.map-bg {
     height: 70vh;
     background: beige;
     z-index: 1;
     position: relative;
 }
 
-.content{
+.content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     z-index: 2;
     text-align: center;
     outline: 1px solid;
+}
+
+.ip-result {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--White);
+    width: 60vw;
+}
+
+.ip-result > *{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.search-bar {
+    display: inline-flex;
+    margin: 20px 0px;
+    text-align: left;
+}
+
+input {
+    padding: 12px 8px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 40px;
+    padding: 12px 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background: var(--Very-Dark-Gray);
+    cursor: pointer;
+}
+
+h1{
+    font-size: 35px;
+    color: var(--White);
+    margin: 0;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 18px;
+    color: var(--Dark-Gray);
+    font-weight: 400;
+}
+
+span{
+    font-size: 35px;
+    color: var(--Very-Dark-Gray);
+    font-weight: 700;
 }
