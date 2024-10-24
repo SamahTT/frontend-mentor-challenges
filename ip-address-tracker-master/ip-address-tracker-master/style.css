@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
-/*400, 500, 700*/
-
 :root {
     --Very-Dark-Gray: hsl(0, 0%, 17%);
     --Dark-Gray: hsl(0, 0%, 59%);
@@ -16,48 +14,58 @@ body {
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.container::-webkit-scrollbar{
+    width: 0;
 }
 
 .header {
-    height: 30vh;
+    height: 40vh;
     background-image: url("images/pattern-bg-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .map-bg {
-    height: 70vh;
     background: beige;
-    z-index: 1;
-    position: relative;
+    min-height: 70vh;
 }
 
-.content {
-    width: 100%;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    z-index: 2;
-    text-align: center;
-    outline: 1px solid;
-}
 
 .ip-result {
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
     margin: 0 auto;
     background: var(--White);
-    width: 600px;
+    width: 80%;
     box-shadow: 0px 5px 12px 0.5px #53535454;
+    padding: 12px 16px;
+    box-sizing: border-box;
 }
 
-.ip-result > *{
-    width: 100%;
-    padding: 10px 20px;
+.ip-result > * {
+    text-align: left;
+    border-right: 1px solid var(--Dark-Gray);
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.ip-result > *:last-child {
+    border-right: none;
 }
 
 .search-bar {
@@ -66,17 +74,20 @@ body {
     text-align: left;
     border-radius: 10px;
     box-shadow: 0px 5px 12px 0.5px #53535454;
+    width: 100%;
+    max-width: 500px;
 }
 
 input {
     padding: 12px;
-    width: 450px;
+    flex-grow: 1;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border: none;
     outline: none;
     font-family: 'Rubik';
     color: var(--Dark-Gray);
+    box-sizing: border-box;
 }
 
 button {
@@ -87,30 +98,55 @@ button {
     border: none;
     background: var(--Very-Dark-Gray);
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-h1{
+button:hover {
+    background: var(--Dark-Gray);
+}
+
+h1 {
     font-size: 35px;
     color: var(--White);
     margin: 0;
     font-weight: 500;
 }
 
-h2{
+h2 {
     font-size: 18px;
     color: var(--Dark-Gray);
     font-weight: 400;
 }
 
-span{
+span {
     font-size: 35px;
     color: var(--Very-Dark-Gray);
     font-weight: 700;
 }
 
-@media only screen and (max-width: 750px){
-    .ip-result, .search-bar{
+@media only screen and (max-width: 750px) {
+    .ip-result, .search-bar {
         width: 80%;
         min-width: 300px;
+    }
+    
+    .ip-result {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ip-result > * {
+        border-right: none;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        background-image: url('images/pattern-bg-mobile.png');
+    }
+
+    input {
+        width: 100%;
     }
 }
