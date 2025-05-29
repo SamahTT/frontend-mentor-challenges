@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css"> <!-- link to the CSS file for styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-links">
+      <ul class="nav-links-list">
+        <li class="logo">
+          <a href="#"><img src="./images/logo.svg" alt="Shortly Logo"></a>
+        </li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+      <ul class="auth-links-list">
+        <li><a href="#">Login</a></li>
+        <li><a href="#" class="cyan-btn">Sign Up</a></li>
+    </nav>
+    <div class="nav-links-mobile">
+      <ul class="nav-links-mobile-list">
+        <li><a href="#" class="light-text">Features</a></li>
+        <li><a href="#" class="light-text">Pricing</a></li>
+        <li><a href="#" class="light-text">Resources</a></li>
+        <li class="login light-text"><a href="#">Login</a></li>
+        <li><a href="#" class="cyan-btn">Sign Up</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero flex-wrapper">
+    <div class="text-wrapper">
+      <h1>More than just shorter links</h1>
+
+      <p>
+        Build your brand’s recognition and get detailed insights
+        on how your links are performing.
+      </p>
+
+      <button class="cyan-btn">
+        Get Started
+      </button>
+
+    </div>
+    <div class="image-wrapper">
+      <img src="./images/illustration-working.svg" alt="Illustration of a person working on a computer">
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="gray-section">
+
+    <div class="url-shortener">
+      <input type="text" name="url" id="url-input" placeholder="Shorten a link here...">
+      <button class="cyan-btn" id="shorten-btn">
+        Shorten It!
+      </button>
+      <div class="result"></div>
+    </div>
+    <h2>
+      Advanced Statistics
+    </h2>
+
+    <p>
+      Track how your links are performing across the web with our
+      advanced statistics dashboard.
+    </p>
+    <div class="card-wrapper">
+      <div class="flex-wrapper">
+        <div class="card">
+          <div class="icon-container">
+            <img src="images/icon-brand-recognition.svg" alt="">
+          </div>
+          <h3>Brand Recognition</h3>
+
+          <p>Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.</p>
+        </div>
+        <div class="card">
+          <div class="icon-container">
+            <img src="images/icon-detailed-records.svg" alt="">
+          </div>
+          <h3>Detailed Records</h3>
+
+          <p> Gain insights into who is clicking your links. Knowing when and where
+            people engage with your content helps inform better decisions.</p>
+        </div>
+        <div class="card">
+          <div class="icon-container">
+            <img src="images/icon-fully-customizable.svg" alt="">
+          </div>
+          <h3>Fully Customizable</h3>
+
+          <p>Improve brand awareness and content discoverability through customizable
+            links, supercharging audience engagement.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="violet-section">
+    <h1 class="light-text">
+      Boost your links today
+    </h1>
+    <button class="cyan-btn">
+      Get Started
+    </button>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="light-text">
+    <div class="flex-wrapper footer-content-wrapper">
+      <img class="light-logo" src="images/logo.svg" alt="Shortly Logo">
+      <ul class="footer-list">
+        <li class="bold-item">Features</li>
+        <li>Link Shortening</li>
+        <li>Branded Links</li>
+        <li>Analytics</li>
+      </ul>
+      <ul class="footer-list">
+        <li class="bold-item">Resources</li>
+        <li>Blog</li>
+        <li>Developers</li>
+        <li>Support</li>
+      </ul>
+      <ul class="footer-list">
+        <li class="bold-item">Company</li>
+        <li>About</li>
+        <li>Our Team</li>
+        <li>Careers</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Samah</a>.
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
