@@ -11,7 +11,7 @@ shortenBtn.addEventListener("click", shortenURL)
 
 
 function changeNavbarList() {
-    if (window.innerWidth <= 750) {
+    if (window.innerWidth <= 855) {
         navbarList.innerHTML = `
         <li class="logo">
             <a href="#"><img src="./images/logo.svg" alt="Shortly Logo"></a>
@@ -62,15 +62,20 @@ async function shortenWithTinyURL(url, apiToken, options = {}) {
         
         if (response.ok && data.data && data.data.tiny_url) {
             console.log(data.data.tiny_url)
+            resultDiv.classList.add(".result-correct")
             resultDiv.textContent = data.data.tiny_url
         } 
         else {
+            resultDiv.classList.add("result-error")
+            resultDiv.textContent = "Something Went Wrong"
             return {
                 success: false,
                 error: data.errors?.[0]?.message || 'Unknown error'
             };
         }
     } catch (error) {
+        resultDiv.classList.add("result-error")
+        resultDiv.textContent = "Something Went Wrong"
         return {
             success: false,
             error: error.message

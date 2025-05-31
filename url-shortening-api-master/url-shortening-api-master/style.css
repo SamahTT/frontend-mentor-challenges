@@ -4,6 +4,7 @@
 --Dark-Violet: hsl(257, 27%, 26%);
 --Red: hsl(0, 87%, 67%);
 --Gray: hsl(0, 0%, 75%);
+--Light-Gray:  hsla(0, 0%, 92%, 0.689);
 --Grayish-Violet: hsl(257, 7%, 63%);
 --Very-Dark-Blue: hsl(255, 11%, 22%);
 --Very-Dark-Violet: hsl(260, 8%, 14%);
@@ -82,7 +83,7 @@ section{
 }
 
 .gray-section{
-    background-color: var(--Gray);
+    background-color: var(--Light-Gray);
 }
 
 .violet-section{
@@ -102,6 +103,7 @@ footer{
 .footer-list{
     flex-direction: column;
     flex-wrap: nowrap;
+    color: var(--Grayish-Violet);
 }
 
 .footer-list li{
@@ -130,6 +132,9 @@ footer{
     margin-left: auto;
     margin-right: auto;
     margin-top: -100px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
 }
 
 .url-shortener button{
@@ -141,30 +146,32 @@ input{
     outline: 0;
     border-radius: 10px;
     padding: 12px 24px;
-    width: 70%;
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     color: var(--Grayish-Violet);
     font-weight: 500;
 }
 
-input, #shorten-btn{
-    display: inline-block;
+.result{
+    padding: 12px 24px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: none;
 }
 
-.result{
-    padding: 12px 22px;
-    height: 20px;
-    width: 86%;
+.result-correct{
+    background-color: rgb(240, 253, 253);
+    color: var(--Cyan);
+    border-left: 4px solid var(--Cyan);
     display: block;
-    border-radius: 10px;
-    border-left: 4px solid cyan;
-    background-color: azure;
-    margin-top: 22px;
-    margin-left: auto;
-    margin-right: auto;
-    color: cyan;
-    text-align: left;
+}
+
+.result-error{
+    background-color: rgb(243, 216, 216);
+    color: var(--Red);
+    border-left: 4px solid var(--Red);
+    display: block;
 }
 
 .flex-wrapper{
@@ -196,7 +203,7 @@ input, #shorten-btn{
     padding: 32px 12px 12px 12px;
     width: 300px;
     height: 280px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .icon-container{
@@ -259,10 +266,11 @@ p{
     .hero{
         flex-direction: column-reverse;
     }
-    .url-shortener > *{
-        display: block;
+    .url-shortener{
+        grid-template-columns: 1fr;
+        width: fit-content;
     }
-    .url-shortener > *, .hero > *{
+    .hero > *{
         width: 100%;
     }
     .text-wrapper, .image-wrapper{
