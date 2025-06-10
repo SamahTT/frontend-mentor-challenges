@@ -20,6 +20,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     background-color: var(--White);
+    min-width: 300px;
 }
 
 nav {
@@ -53,13 +54,13 @@ main {
     margin-top: 4rem;
     outline: 1px solid red;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr); 
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /*grid-template-columns: repeat(4, 1fr); */
 }
 
 .country-preview-el{
-    width: 280px;
-    height: 440px;
+    height: 350px;
     border-radius: 7px;
     outline: 1px solid yellow;
 }
@@ -67,6 +68,8 @@ main {
 .flag-img-div{
     width: 100%;
     height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     background-color: blue;
 }
 
@@ -85,7 +88,7 @@ main {
 .filter-span{
     border-radius: 6px;
     padding: 10px 15px;
-    box-shadow: 0px 0px 10px 1px hsla(0, 0%, 74%, 0.492);
+    box-shadow: 0px 0px 5px 0.3px hsla(0, 0%, 74%, 0.492);
     background-color: var(--White);
 }
 
@@ -113,16 +116,6 @@ main {
     }
 
     .filter-span{
-        margin-top: 2rem;
-    }
-
-    .previews-container{
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 375px){
-    .previews-container{
-        grid-template-columns: 1fr; 
+        margin-top: 1rem;
     }
 }
