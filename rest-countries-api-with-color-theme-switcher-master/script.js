@@ -44,7 +44,7 @@ function renderCountries(countries) {
     for (let i = 0; i < 20; i++) {
         countryPrevText +=
             `<div class="country-preview-el">
-                <div class="flag-img-div"></div>
+                <div class="flag-img-div" style="background-image:url(${countries[i].flag})"></div>
                 <div class="country-details-div">
                     <h3>${countries[i].name}</h3>
                     <p>Population: <span id="population-span">${countries[i].population}</span></p>

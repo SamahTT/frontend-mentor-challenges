@@ -34,12 +34,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    border-bottom: 1px solid red;
+    box-shadow: 10px 0px 5px 0.3px hsla(0, 0%, 74%, 0.492);
 }
 
-nav a {
+.logo {
     text-decoration: none;
     color: var(--Blue-900);
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
 main {
@@ -57,17 +59,16 @@ main {
 
 .previews-container{
     margin-top: 4rem;
-    outline: 1px solid red;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    /*grid-template-columns: repeat(4, 1fr); */
 }
 
 .country-preview-el{
     height: 350px;
     border-radius: 7px;
-    outline: 1px solid yellow;
+    box-shadow: 0px 0px 5px 0.3px hsla(0, 0%, 74%, 0.492);
+    background-color: var(--White);
 }
 
 .flag-img-div{
@@ -75,12 +76,15 @@ main {
     height: 50%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: blue;
+    background-color: azure;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.country-preview-el p{
-    margin-top: 0;
-    line-height: 0.6;
+.country-details-div{
+    background-color: var(--White);
+    padding: 0px 12px;
 }
 
 .btn {
@@ -114,13 +118,29 @@ main {
 }
 
 
+.country-preview-el p{
+    margin-top: 0;
+    line-height: 0.6;
+    color: var(--Grey-950);
+}
+
+p span{
+    font-weight: 300;
+}
+
+h3{
+    color: var(--Blue-950);
+    font-weight: 800;
+}
+
+
 @media (max-width: 775px){
     .filters-wrapper{
         flex-direction: column;
     }
 
     .filters-wrapper > *{
-        width: 80%;
+        width: 90%;
     }
 
     .filter-span{
