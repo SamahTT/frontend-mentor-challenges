@@ -7,7 +7,7 @@ fetch("data.json")
     .then((res) => res.json())
     .then(
         (data) => {
-            let countryObj = {
+            /*let countryObj = {
                 name: '',
                 population: '',
                 region: '',
@@ -33,7 +33,7 @@ fetch("data.json")
                 countryObj.languages = country.languages[0].name
 
                 countries.push(countryObj)
-            }
+            }*/
             renderCountries(data)
         })
 
@@ -54,6 +54,9 @@ function renderCountries(countries) {
             </div>`
     }
     document.querySelector(".previews-container").innerHTML = countryPrevText
+    document.querySelectorAll(".country-preview-el").forEach( el => {
+        el.addEventListener("click", renderDetails)
+    })
 }
 
 
@@ -64,4 +67,9 @@ function toggleDarkMode() {
     }
     else
         darkModeBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode'
+}
+
+
+function renderDetails(){
+    console.log("hello from the render details function")
 }
