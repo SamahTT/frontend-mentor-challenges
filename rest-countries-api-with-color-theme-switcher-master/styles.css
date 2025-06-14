@@ -13,6 +13,11 @@
     --White: hsl(0, 100%, 100%);
 }
 
+.dark-mode{
+    background-color: var(--Blue-950);
+    color: var(--White);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -82,6 +87,9 @@ main {
     padding: 12px 8px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .search-bar-span,
