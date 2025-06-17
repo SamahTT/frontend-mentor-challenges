@@ -1,6 +1,11 @@
 const darkModeBtn = document.getElementById("dark-mode-btn")
+const regionInput = document.getElementById("region-filter")
+const nameInput = document.getElementById("name-search")
+let countriesArr = []
 
 
+nameInput.addEventListener("input", filterByName)
+regionInput.addEventListener("change", filterByRegion)
 darkModeBtn.addEventListener("click", toggleDarkMode)
 
 fetch("data.json")
@@ -34,16 +39,17 @@ fetch("data.json")
 
                 countries.push(countryObj)
             }*/
-            renderCountries(data)
+            countriesArr = data
+            renderCountries(countriesArr)
         })
 
 
 function renderCountries(countries) {
     console.log(countries)
     let countryPrevText = ``
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < Math.min(countries.length, 20); i++) {
         countryPrevText +=
-            `<div class="country-preview-el">
+            `<div class="country-preview-el data-country-name=${countries[i].name}">
                 <div class="flag-img-div" style="background-image:url(${countries[i].flag})"></div>
                 <div class="country-details-div">
                     <h3>${countries[i].name}</h3>
@@ -54,8 +60,10 @@ function renderCountries(countries) {
             </div>`
     }
     document.querySelector(".previews-container").innerHTML = countryPrevText
-    document.querySelectorAll(".country-preview-el").forEach( el => {
-        el.addEventListener("click", renderDetails)
+    document.querySelectorAll(".country-preview-el").forEach(el => {
+        el.addEventListener("click", () => {
+            renderDetails(el.dataset.countryName)
+        })
     })
 }
 
@@ -70,6 +78,32 @@ function toggleDarkMode() {
 }
 
 
-function renderDetails(){
-    console.log("hello from the render details function")
+function renderDetails(whatever) {
+    console.log(whatever)
+    console.log("hello")
+
 }
+
+function filterByRegion() {
+    let region = regionInput.value
+    console.log(region)
+    if (region === "reset") {
+        renderCountries(countriesArr)
+    }
+    else {
+        const filteredCountries = countriesArr.filter((country) => {
+            return country.region === region
+        })
+        renderCountries(filteredCountries)
+    }
+}
+
+function filterByName() {
+    let name = nameInput.value.toLowerCase()
+    // console.log(name)
+    const filteredCountries = countriesArr.filter((country) => {
+        return country.name.toLowerCase().includes(name)
+    })
+    renderCountries(filteredCountries)
+}
+
