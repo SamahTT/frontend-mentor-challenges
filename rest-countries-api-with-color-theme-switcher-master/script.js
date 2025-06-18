@@ -4,9 +4,8 @@ const nameInput = document.getElementById("name-search")
 let countriesArr = []
 
 
-nameInput.addEventListener("input", filterByName)
-regionInput.addEventListener("change", filterByRegion)
 darkModeBtn.addEventListener("click", toggleDarkMode)
+
 
 fetch("data.json")
     .then((res) => res.json())
@@ -49,7 +48,7 @@ function renderCountries(countries) {
     let countryPrevText = ``
     for (let i = 0; i < Math.min(countries.length, 20); i++) {
         countryPrevText +=
-            `<div class="country-preview-el data-country-name=${countries[i].name}">
+            `<div class="country-preview-el" data-country-name=${countries[i].name}>
                 <div class="flag-img-div" style="background-image:url(${countries[i].flag})"></div>
                 <div class="country-details-div">
                     <h3>${countries[i].name}</h3>
@@ -62,7 +61,7 @@ function renderCountries(countries) {
     document.querySelector(".previews-container").innerHTML = countryPrevText
     document.querySelectorAll(".country-preview-el").forEach(el => {
         el.addEventListener("click", () => {
-            renderDetails(el.dataset.countryName)
+            renderDetailes(el.dataset.countryName)
         })
     })
 }
@@ -70,23 +69,52 @@ function renderCountries(countries) {
 
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode")
-    if (darkModeBtn.textContent.trim() === "Dark Mode") {
+    if (darkModeBtn.textContent.trim() === "Dark Mode")
         darkModeBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode'
-    }
     else
         darkModeBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode'
 }
 
 
-function renderDetails(whatever) {
-    console.log(whatever)
-    console.log("hello")
+function renderDetailes(name) {
+    const filteredCountries = countriesArr.filter((country) => {
+        return country.name === name
+    })
+    console.log(filteredCountries)
+    let detailesHTMLText = 
+                `<h1>${filteredCountries.name}</h1>
 
+                <div class="detailes-col-wrapper">
+                    <div class="details-col">
+                        <p>Native Name: <span id="native-name-span">${filteredCountries.nativeName}</span></p>
+                        <p>Population: <span id="population-span">${filteredCountries.population}</span></p>
+                        <p>Region: <span id="region-span">${filteredCountries.region}</span></p>
+                        <p>Sub Region: <span id="sub-region-span">${filteredCountries.subRegion}</span></p>
+                        <p>Capital: <span id="capital-span">${filteredCountries.capital}</span></p>
+                    </div>
+
+                    <div class="details-col">
+                        <p>Top Level Domain: <span id="top-level-domain-span">${filteredCountries.topLevelDomain}</span></p>
+                        <p>Currencies: <span id="currencies-span">${filteredCountries.currencies}</span></p>
+                        <p>Languages: <span id="languages-span">${filteredCountries.languages}</span></p>
+                    </div>
+                </div>
+
+                <p id="border-countries-el">Border Countires: <span class="border-span">--</span></p>`
+
+    
+    window.location.href = "detailes.html"
+    document.querySelector(".detailes-text-div").innerHTML = detailesHTMLText
+   
 }
+
+if(nameInput)
+    nameInput.addEventListener("input", filterByName)
+if(regionInput)
+    regionInput.addEventListener("change", filterByRegion)
 
 function filterByRegion() {
     let region = regionInput.value
-    console.log(region)
     if (region === "reset") {
         renderCountries(countriesArr)
     }
@@ -100,10 +128,12 @@ function filterByRegion() {
 
 function filterByName() {
     let name = nameInput.value.toLowerCase()
-    // console.log(name)
     const filteredCountries = countriesArr.filter((country) => {
         return country.name.toLowerCase().includes(name)
     })
     renderCountries(filteredCountries)
 }
+
+
+
 

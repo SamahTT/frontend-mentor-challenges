@@ -86,13 +86,17 @@ main {
 }
 
 .btn {
-    padding: 12px 8px;
-    border-radius: 10px;
+    padding: 8px 12px;
     cursor: pointer;
     background-color: transparent;
     border: 0;
     font-family: 'Nunito Sans', sans-serif;
     color: var(--text-color);
+}
+
+.border-btn{
+    background-color: var(--element-color);
+    box-shadow: var(--box-shadow);
 }
 
 .search-bar-span,
@@ -136,24 +140,42 @@ h3{
 /*
 DETAILS PAGE
 */
+
+h1{
+    font-weight: 800;
+    color: var(--text-color);
+}
+
 .details-wrapper{
-    outline: 1px solid red;
+    margin-top: 4rem;
 }
 
 .flag-img-div-lg, .details-text-div{
     width: 45%;
     border-radius: 7px;
-    outline: 1px solid blue;
 }
 
-.details-col{
-    display: inline-block;
+.detailes-col-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-col, #border-countries-el, h1{
+    margin-top: 2rem;
+}
+
+.border-span{
+    background-color: var(--element-color);
+    box-shadow: var(--box-shadow);
+    padding: 8px 12px;
+    margin-left: 5px;
 }
 
 
 @media (max-width: 775px){
     .filters-wrapper,
-    .details-wrapper{
+    .details-wrapper,
+    .detailes-col-wrapper{
         flex-direction: column;
     }
 
@@ -163,5 +185,9 @@ DETAILS PAGE
 
     .filter-span{
         margin-top: 1rem;
+    }
+
+    .flag-img-div-lg, .details-text-div{
+        width: 100%;
     }
 }
